@@ -1,4 +1,3 @@
-
 import os
 from collections import Counter
 
@@ -21,4 +20,3 @@ if __name__ == '__main__':
     my_print("Hello World!")
     letters_count = count_letters('text.txt')
     my_print(letters_count)
-
