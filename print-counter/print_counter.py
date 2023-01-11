@@ -1,10 +1,11 @@
-import sys
+
+import os
 from collections import Counter
 
 
 def my_print(*args, end='\n', sep=' '):
     output = sep.join(map(str, args)) + end
-    sys.stdout.write(output)
+    os.write(1, output.encode())
 
 
 def count_letters(file_path):
@@ -17,6 +18,7 @@ def count_letters(file_path):
 
 
 if __name__ == '__main__':
-    my_print('Hello World! ')
+    my_print("Hello World!")
     letters_count = count_letters('text.txt')
     my_print(letters_count)
+
